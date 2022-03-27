@@ -1,4 +1,5 @@
 import java.util.Stack;
+
 /**
  * Constraints:
  *      Supports just a single type of parenthesis - '()'
