@@ -34,7 +34,6 @@ class Calculator {
 
             if (Character.isDigit(currChar)) {
                 currNum = 10.0 * currNum + currChar - '0';
-
             }
 
             if (currChar == '(') {
@@ -54,14 +53,8 @@ class Calculator {
                 currNum = 0;
             }
         }
-
-        double res = 0;
-        while (!stack.isEmpty()) {
-            res += stack.pop();
-        }
-        return res;
+        return stack.stream().mapToDouble(Double::doubleValue).sum();
     }
-
 
     private int getEndIndexOfParenthesisBlock(char[] mathExpression, int currIndex, int endIndex) {
         int i;
@@ -117,8 +110,6 @@ class Calculator {
     }
 
     private boolean isValidOperator(char c) {
-
         return c == '+' || c == '-' || c == '*' || c == '/';
-
     }
 }
