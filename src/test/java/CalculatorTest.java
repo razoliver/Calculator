@@ -47,7 +47,8 @@ public class CalculatorTest {
                 Arguments.of(" 5 + 6 + "),
                 Arguments.of("5 +- 6"),
                 Arguments.of("((((5 + 6 ) ) ) ) )"),
-                Arguments.of("5 + 1 + a")
+                Arguments.of("5 + 1 + a"),
+                Arguments.of("")
         );
     }
 }
